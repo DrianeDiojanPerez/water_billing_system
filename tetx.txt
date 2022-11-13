@@ -1,0 +1,1000 @@
+  236  history | more
+  237  cat .profile
+  238  postgress $SCH_DB_DSN
+  239  postgres $SCH_DB_DSN
+  240  psql $SCH_DB_DSN
+  241  go version
+  242  go install github.com/rakyll/hey@latest
+  243  hey
+  244  go install github.com/rakyll/hey@latest
+  245  hey
+  246  go install github.com/rakyll/hey@latest
+  247  hey
+  248  history | more
+  249  code .
+  250  curl -i localhost:4000/v1/healthcheck
+  251  curl -i localhost:4004/v1/healthcheck
+  252  git status
+  253  git add .
+  254  git status
+  255  git commit -m "added a server and created a handler to check handler that everything works"
+  256  git push
+  257  go get github.com/julienschmidt/httprouter@1.3.0
+  258  go get github.com/julienschmidt/httprouter@v1.3.0
+  259  touch cmd/api/routes.go
+  260  git add .
+  261  git commit -m "installing a third party router"
+  262  git push
+  263  touch cmd/api/entries.go
+  264  vim .profile
+  265  psql $KRIOL_DB_DSN
+  266  curl localhost:4000/v1/healthcheck
+  267  curl -X localhost:4000/v1/entires
+  268  curl -X localhost:4000/v1/entries
+  269  curl -X POST localhost:4000/v1/entries
+  270  curl localhost:4000/v1/entries/7
+  271  curl localhost:4000/v1/entries/-1
+  272  curl localhost:4000/v1/entries/0
+  273  curl localhost:4000/v1/entries/7
+  274  curl -i -x POST localhost:4000/v1/healthcheck
+  275  curl -i -X POST localhost:4000/v1/healthcheck
+  276  curl -X POST localhost:4000/v1/healthcheck
+  277  curl -X OPTIONS localhost:4000/v1/healthcheck
+  278  curl -i -X OPTIONS localhost:4000/v1/healthcheck
+  279  curl localhost:4000/v1/entries/ub
+  280  git status
+  281  git add .
+  282  git status
+  283  git commit -m "creating new handlers"
+  284  git push
+  285  git status
+  286  curl localhost:4000/v1/entries/7
+  287  curl localhost:4000/v1/entries/0
+  288  curl localhost:4000/v1/entries/-1
+  289  curl localhost:4000/v1/entries/dr
+  290  git status
+  291  git add .
+  292  git commit -m "moved the code that check for the id parameter into its own method readIDparam"
+  293  git push
+  294  migrate create -seq -ext=.sql -dir=./migrations kriol_migration_table
+  295  go run ./cmd/api
+  296  go run ./cmd/api -port=4004 -env=staging
+  297  go mod tidy
+  298  go run ./cmd/api 
+  299  vim .profile
+  300  sudo -u postgres createuser -e Driane_Perez
+  301  sudo -u postgres createuser Driane -P
+  302  sudo -u postgres 
+  303  sudo -u psql 
+  304  sudo psql 
+  305  sudo -u psql psql
+  306  sudo -u postgres psql
+  307  psql $KRIOL_DB_DSN
+  308  e;m repl
+  309  elm rpl
+  310  elm repl
+  311  code .
+  312  elm repl
+  313  curl -i https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=7306a7e1bd42e6d28d009ded2ce05f9f
+  314  curl -i https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={7306a7e1bd42e6d28d009ded2ce05f9f}
+  315  curl -i -X POST https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=7306a7e1bd42e6d28d009ded2ce05f9f
+  316  curl -i api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=7306a7e1bd42e6d28d009ded2ce05f9f
+  317  curl -i -X POST api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=7306a7e1bd42e6d28d009ded2ce05f9f
+  318  curl -i api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=7306a7e1bd42e6d28d009ded2ce05f9f
+  319  curl -i -X POST api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=7306a7e1bd42e6d28d009ded2ce05f9f
+  320  curl -i -X OPTIONS api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=7306a7e1bd42e6d28d009ded2ce05f9f
+  321  curl -i OPTIONS api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=7306a7e1bd42e6d28d009ded2ce05f9f
+  322  curl -i -X POST api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=7306a7e1bd42e6d28d009ded2ce05f9f
+  323  curl -i http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=7306a7e1bd42e6d28d009ded2ce05f9f
+  324  curl -i https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=7306a7e1bd42e6d28d009ded2ce05f9f
+  325  curl -i "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=7306a7e1bd42e6d28d009ded2ce05f9f"
+  326  curl -i "https://api.openweathermap.org/data/2.5/weather?q=Belize,uk&APPID=7306a7e1bd42e6d28d009ded2ce05f9f"
+  327  curl -i "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=7306a7e1bd42e6d28d009ded2ce05f9f"
+  328  elm repl
+  329  curl -i "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=7306a7e1bd42e6d28d009ded2ce05f9f"
+  330  curl -i "https://api.openweathermap.org/data/2.5/weather?lat=17.1899&lon=88.4976&appid=7306a7e1bd42e6d28d009ded2ce05f9f"
+  331  elm repl
+  332  migrate create -seq -ext=.sql -dir=./migrations Add_a_PRIMARY_KEY
+  333  migrate create -seq -ext=.sql -dir=./migrations new_column
+  334  migrate -path=./migrations -database=$KRIOL_DB_DSN up
+  335  migrate -path=./migrations -database=$KRIOL_DB_DSN down
+  336  code .
+  337  git add .
+  338  git commit -m "migrations added"
+  339  git push
+  340  psql $KRIOL_DB_DSN
+  341  code .
+  342  elm repl
+  343  clear
+  344  curl -i "https://api.openweathermap.org/geo/1.0/direct?q=Belize&limit=5&appid=7306a7e1bd42e6d28d009ded2ce05f9f"
+  345  clrear
+  346  clear
+  347  curl -i "https://api.openweathermap.org/geo/1.0/direct?q=Belize&limit=5&appid=7306a7e1bd42e6d28d009ded2ce05f9f"
+  348  code .
+  349  mkdir photo
+  350  cd photo
+  351  code .
+  352  ls
+  353  cd bin
+  354  cd ..
+  355  ls
+  356  ..
+  357  cd ..
+  358  ls
+  359  cd
+  360  ls -l
+  361  ls -i
+  362  ls --hel
+  363  ls --help
+  364  ls -h
+  365  ls man
+  366  man ls
+  367  ls -help
+  368  ls
+  369  mkdir bin
+  370  ls
+  371  cd .profile
+  372  vim .profile
+  373  touch bin/make-go-dir.sh
+  374  vim make-go-dir.sh
+  375  rm make-go-dir.sh 
+  376  chmod 777 bin/make-go-dir.sh 
+  377  ls bin/
+  378  vim bin/make-go-dir.sh
+  379  make-go-dir
+  380  make-go-dir.sh
+  381  ./make-go-dir.sh
+  382  $HOME
+  383  .make-go-dir.sh
+  384  ls bin/
+  385  vim bin/make-go-dir.sh
+  386  chmod 777 bin/make-go-dir.sh 
+  387  ls -l
+  388  ls bin/ -l
+  389  vim bin/make-go-dir.sh
+  390  ./bin/make-go-dir.sh
+  391  make-go-dir.sh
+  392  ./make-go-dir.sh
+  393  echo $PATH
+  394  make-go-dir.sh
+  395  make-go-dir
+  396  ls-l
+  397  ls -l
+  398  ls -a
+  399  cd ....
+  400  cd ..
+  401  vim .profile
+  402  rm .profile
+  403  rm .Profile
+  404  ls
+  405  cd
+  406  vim .profile
+  407  cd
+  408  cd bin
+  409  ls
+  410  make-go-dir.sh
+  411  $PATH
+  412  vim .profile
+  413  cd ..
+  414  vim .profile
+  415  $HOME
+  416  cd /home/drianeperez/bin/
+  417  ls
+  418  cd ..
+  419  ls
+  420  cd bin
+  421  ls
+  422  ls | grep adduser
+  423  ls | grep a
+  424  ls | grep useradd
+  425  ls | grep user
+  426  vim createuser
+  427  createuser --help
+  428  vim createuser
+  429  vim dropuser
+  430  vim createuser
+  431  vim grep
+  432  cd
+  433  cd bin
+  434  ls
+  435  vim make-go-dir 
+  436  make-go-dir 
+  437  make-go-dir dri dri
+  438  vim make-go-dir
+  439  cd ..
+  440  cd bin
+  441  vim chmod
+  442  vim make-go-dir
+  443  cd
+  444  dc bin
+  445  cd bin
+  446  vim make-go-dir
+  447  make-go-dir dri dri
+  448  vim make-go-dir
+  449  make-go-dir dri dri
+  450  make-go-dir dri d
+  451  make-go-dir dri dri
+  452  vim make-go-dir
+  453  vim make-go-dir d
+  454  vim make-go-dir 
+  455  make-go-dir dri
+  456  make-go-dir dri dri d
+  457  vim make-go-dir 
+  458  make-go-dir dri dri d
+  459  vim make-go-dir 
+  460  make-go-dir dri dri d
+  461  vim make-go-dir 
+  462  make-go-dir dri dri d
+  463  make-go-dir dri dri
+  464  make-go-dir dri dri d d
+  465  make-go-dir dri dri
+  466  make-go-dir dri
+  467  vim make-go-dir 
+  468  make-go-dir dri
+  469  make-go-dir dri dri
+  470  make-go-dir dri dri d
+  471  vim make-go-dir 
+  472  make-go-dir dri dri d
+  473  make-go-dir dri dri 
+  474  make-go-dir dri dri dr dr
+  475  make-go-dir dri dri
+  476  vim make-go-dir 
+  477  make-go-dir dri dri
+  478  vim make-go-dir 
+  479  make-go-dir dri dri
+  480  vim make-go-dir 
+  481  make-go-dir dri dri
+  482  vim make-go-dir 
+  483  make-go-dir dri dri
+  484  vim make-go-dir 
+  485  make-go-dir dri dri
+  486  vim make-go-dir 
+  487  make-go-dir dri dri
+  488  vim make-go-dir 
+  489  make-go-dir dri dri
+  490  vim make-go-dir 
+  491  make-go-dir dri dri
+  492  vim make-go-dir 
+  493  make-go-dir dri dri
+  494  vim make-go-dir 
+  495  make-go-dir dri dri
+  496  :wq
+  497  vim make-go-dir 
+  498  make-go-dir dri dri
+  499  vim make-go-dir 
+  500  make-go-dir dri dri
+  501  vim make-go-dir 
+  502  make-go-dir dri dri
+  503  vim make-go-dir 
+  504  $HOME
+  505  env
+  506  :wq
+  507  echo$HOME
+  508  echo $HOME
+  509  mkdir "$HOME/dri"
+  510  cd
+  511  ls
+  512  vim make-go-dir 
+  513  vim bin/make-go-dir 
+  514  make-go-dir dri dri
+  515  make-go-dir aplle app
+  516  ls
+  517  vim bin/make-go-dir 
+  518  make-go-dir aplle1 app
+  519  vim bin/make-go-dir 
+  520  make-go-dir aplleeew ff
+  521  make-go-dir aplleeewe ff.net
+  522  vim bin/make-go-dir 
+  523  make-go-dir aplleeewe ff.net
+  524  make-go-dir aplleeewew ff.net
+  525  vim bin/make-go-dir 
+  526  make-go-dir aplleeewewe ff.net
+  527  vim bin/make-go-dir 
+  528  make-go-dir aplleeewewe ff
+  529  make-go-dir aplleeewewe ff.net
+  530  vim bin/make-go-dir 
+  531  make-go-dir aplleeewewew ff.net
+  532  vim bin/make-go-dir 
+  533  make-go-dir drianeperez apple.net
+  534  ls
+  535  cd drianeperez
+  536  ls
+  537  cat go.mod
+  538  cd cmd
+  539  ls
+  540  cd api
+  541  ls
+  542  cat main.go
+  543  vim bin/make-go-dir 
+  544  cd
+  545  vim bin/make-go-dir 
+  546  make-go-dir driane apple.net
+  547  ls
+  548  cd driane
+  549  ls
+  550  cd cmd
+  551  ls
+  552  cd api
+  553  ls
+  554  cat main.go
+  555  go run .
+  556  vim bin/make-go-dir 
+  557  cd
+  558  vim bin/make-go-dir 
+  559  make-go-dir driane.p apple.net
+  560  cd driane.p
+  561  ls
+  562  cd cmd
+  563  cd api
+  564  ls
+  565  cat main.go
+  566  go run ,
+  567  cd
+  568  vim bin/make-go-dir 
+  569  make-go-dir driane.perez apple.net
+  570  cd driane.perez
+  571  ls
+  572  cd cmd
+  573  cd api
+  574  ls
+  575  cat main.go
+  576  go run .
+  577  cd
+  578  vim bin/make-go-dir 
+  579  make-go-dir driane.perez.1 apple.net
+  580  cd driane.perez.1.apple.net
+  581  cd driane.perez.1
+  582  cd cmd
+  583  cd api
+  584  cat main.go
+  585  go run .
+  586  cd
+  587  vim bin/make-go-dir 
+  588  make-go-dir dperez apple.net
+  589  vim bin/make-go-dir 
+  590  make-go-dir dperez1 apple.net
+  591  ls
+  592  cd dperez1
+  593  go run ./cmd/api
+  594  cd
+  595  vim bin/make-go-dir 
+  596  make-go-dir dperez1 apple
+  597  make-go-dir dperez1 apple.net dr
+  598  make-go-dir dperez1
+  599  cd
+  600  cd bin
+  601  git remote add origin https://github.com/SENOVOYT/bin.git
+  602  git remote add origin git@github.com:SENOVOYT/bin.git
+  603  git init
+  604  code .
+  605  git add .
+  606  git status
+  607  git commit -m "make-dir-go"
+  608  touch README.md
+  609  echo "# bin" >> README.md
+  610  git add README.md
+  611  git remote add origin git@github.com:SENOVOYT/bin.git
+  612  git branch -M main
+  613  git push -u origin main
+  614  git pull
+  615  rm .profile
+  616  git add .
+  617  git commit -m "Final commit" 
+  618  git push
+  619  ls bin 
+  620  cd bin
+  621  nano make-go-dir 
+  622  code ./
+  623  sudo shutdown -h 0
+  624  mkdir d
+  625  touch /d
+  626  touch /d/d
+  627  touch d/d
+  628  ls d
+  629  ;s
+  630  ls
+  631  rm aplle
+  632  rm -r aplle
+  633  rm -r aplle1
+  634  rm -r aplleeew
+  635  rm -r aplleeewe
+  636  rm -r aplleeewew
+  637  rm -r aplleeewewe
+  638  LS
+  639  ls
+  640  rm -r aplleeewewew
+  641  ls bin
+  642  vim make-go-dir
+  643  vim bin/make-go-dir
+  644  make-go-dir driane-app drianeperez.net
+  645  cd driane-app/
+  646  go run ./cmd/api/
+  647  make-go-dir driane-app drianeperez.net dri
+  648  make-go-dir driane-app drianepere
+  649  make-go-dir driane-ap
+  650  -app dri dri
+  651  code .
+  652  code .
+  653  code .
+  654  code 
+  655  code .
+  656  git clone https://github.com/OsbornCollins/wetransfer.git
+  657  ls
+  658  ls -l
+  659  ls -a
+  660  vim .profile
+  661  ls
+  662  cd Code/
+  663  ls
+  664  cd kriol/
+  665  ls
+  666  code ./
+  667  elm int
+  668  elm init
+  669  ls
+  670  code .
+  671  touch src/sign.star.elm
+  672  go mod int quiz.2.driane.perez.net
+  673  go mod init quiz.2.driane.perez.net
+  674  code .
+  675  cd ..
+  676  ld
+  677  ls
+  678  cd Sign.Star/
+  679  elm init
+  680  cd ..
+  681  cd star
+  682  cd Star
+  683  ls
+  684  elm init
+  685  git init
+  686  git add .
+  687  git status
+  688  git commit -m "first commit"
+  689  git branch -M main
+  690  git remote add origin git@github.com:SENOVOYT/quiz_2.git
+  691  git push -u origin main
+  692  git pull
+  693  mkdir quiz_section_1
+  694  code .
+  695  git status
+  696  git add .
+  697  git status
+  698  git commit -m "cmd code added"
+  699  git push
+  700  git status
+  701  git add .
+  702  git commit -m "added code for internal code"
+  703  git push
+  704  git add .
+  705  git commit -m "encoding structs"
+  706  git push
+  707  git add .
+  708  git commit -m "updated entries code"
+  709  git push
+  710  git add .
+  711  git commit -m "feature to add entry via JSON request"
+  712  git push
+  713  git add .
+  714  git commit -m "updated routes"
+  715  git push
+  716  git add .
+  717  git commit -m "finalize validator code"
+  718  git push
+  719  go run ./cmd/api/
+  720  go run ./cmd/api/
+  721  curl localhost:4000/v1/entries/1
+  722  curl localhost:4000/v1/entries/14
+  723  curl localhost:4000/v1/entries/10000
+  724  curl localhost:4000/v1/entries/10001
+  725  curl -i localhost:4000/ice
+  726  curl -i -X POST localhost:4000/ice
+  727  curl -i -X POST localhost:4000/v1/healthcheck
+  728  curl -i localhost:4000/v1/entries
+  729  curl -i - X localhost:4000/v1/entries
+  730  curl -i -X localhost:4000/v1/entries
+  731  curl -X POST localhost:4000/v1/entries
+  732  BODY='{ "name": "driane",
+  733  	    "string": "driane eieie",
+  734  		"translate": "drinaeeeee",
+  735  		"phone": "501-655-5555",
+  736  		"email": "drianeperez12@gmail.com",
+  737  		"website": "http://xyz.edu.bz",
+  738  		"mode":["driane","driane"]}'
+  739  curl -i -d "$BODY" localhost:4000/v1/entries
+  740  curl -i -d "$BODY" localhost:4000/v1/informaion
+  741  curl -i -d "$BODY" localhost:4000/v1/information
+  742  BODY='{ "name": "driane",
+  743  	    "string": "driane eieie",
+  744  		"translate": "drinaeeeee",
+  745  		"phone": "501-655-5555",
+  746  		"email": "drianeperez12@gmail.com",
+  747  		"website": "http://xyz.edu.bz",
+  748  		"mode":["driane","driane2"]}'
+  749  curl -i -d "$BODY" localhost:4000/v1/information
+  750  BODY='{ "name": "driane",
+  751  	    "string": "driane eieie",
+  752  		"translate": "drinaeeeee",
+  753  		"phone": "655-5555",
+  754  		"email": "drianeperez12@gmail.com",
+  755  		"website": "http://xyz.edu.bz",
+  756  		"mode":["driane","driane2"]}'
+  757  curl -i -d "$BODY" localhost:4000/v1/information
+  758  BODY='{ "name": "driane",
+  759  	    "string": "driane eieie",
+  760  		"translate": "drinaeeeee",
+  761  		"phone": "501-655-5555",
+  762  		"email": "drianeperez12@gmail.com",
+  763  		"website": "http://xyz.edu.bz",
+  764  		"mode":["driane","driane2"]}'
+  765  curl -i -d "$BODY" localhost:4000/v1/information
+  766  BODY='{ "name": "driane",
+  767  	    "string": "driane eieie",
+  768  		"translate": "drinaeeeee",
+  769  		"phone": "501-655-5555",
+  770  		"email": "drianeperez12@gm",
+  771  		"website": "http://xyz.edu.bz",
+  772  		"mode":["driane","driane2"]}'
+  773  curl -i -d "$BODY" localhost:4000/v1/information
+  774  BODY='{ "name": "driane",
+  775  	    "string": "driane eieie",
+  776  		"translate": "drinaeeeee",
+  777  		"phone": "501-655-5555",
+  778  		"email": "drianeperez12",
+  779  		"website": "http://xyz.edu.bz",
+  780  		"mode":["driane","driane2"]}'
+  781  curl -i -d "$BODY" localhost:4000/v1/information
+  782  BODY='{ "name": "driane",
+  783  	    "string": "driane eieie",
+  784  		"translate": "drinaeeeee",
+  785  		"phone": "501-655-5555",
+  786  		"email": "drianeperez12",
+  787  		"website": "http://xyz.edu.bz",
+  788  		"mode":["driane","driane"]}'
+  789  curl -i -d "$BODY" localhost:4000/v1/information
+  790  curl -i -d "$BODY" localhost:4000/v1/
+  791  BODY='{ "name": "driane",
+  792  	    "string": "driane eieie",
+  793  		"translate": "drinaeeeee",
+  794  		"phone": "501-655-5555",
+  795  		"email": "",
+  796  		"website": "http://xyz.edu.bz",
+  797  		"mode":["driane","driane2"]}'
+  798  curl -i -d "$BODY" localhost:4000/v1/information
+  799  BODY='{ "name": "driane",
+  800  	    "string": "driane eieie",
+  801  		"translate": "drinaeeeee",
+  802  		"phone": "501-655-5555",
+  803  		"email": "drianeperez12@gmail.com",
+  804  		"website": "http://xyz.edu.bz",
+  805  		"mode":["driane","driane2"]}'
+  806  curl -i -d "$BODY" localhost:4000/v1/information
+  807  curl -i  localhost:4000/v1/random/44
+  808  curl -i  localhost:4000/v1/random/100001
+  809  curl -i  localhost:4000/v1/random/10000
+  810  go run cmd/api/
+  811  go run .cmd/api/
+  812  go run cmd/api/
+  813  code .
+  814  go add .
+  815  git add .
+  816  git commit -m "star click"
+  817  git push
+  818  git add .
+  819  git commit -m "star click alignment"
+  820  git push
+  821  elm make src/Star.elm --output Star.js
+  822  git clone https://github.com/Kingjamesx2/quiz2.git
+  823  touch talk.txt
+  824  code .
+  825  cd quiz_section_1/
+  826  go run cmd/api/
+  827  go run cmd/api/.
+  828  go run ./cmd/api/.
+  829  code .
+  830  code .
+  831  code
+  832  code .
+  833  code .
+  834  git clone https://github.com/Kingjamesx2/quiz2
+  835  git add .
+  836  git status
+  837  git commit -m "last commit"
+  838  git push
+  839  ls
+  840  cd code
+  841  cd Code
+  842  ls
+  843  cd Quiz_2/
+  844  code .
+  845  touch database.txt
+  846  code ,
+  847  code .
+  848  mkdir QUiZ_3
+  849  cd QUiZ_3/
+  850  echo "# QUIZ_3" >> README.md
+  851  ls
+  852  git init
+  853  git add README.md
+  854  git commit -m "first commit"
+  855  git branch -M main
+  856  git remote add origin git@github.com:SENOVOYT/QUIZ_3.git
+  857  git push -u origin main
+  858  history >> driane.txt && grep 'postg' driane.txt
+  859  postgres $SCH_DB_DSN
+  860  postgress $SCH_DB_DSN
+  861  postgres $SCH_DB_DSN
+  862  code .
+  863  history
+  864  history >> driane.txt
+  865  ls
+  866  cat driane.txt 
+  867  grep 'jul' driane.txt 
+  868  cd
+  869  postgres $SCH_DB_DSN
+  870  sudo -u postgress psql
+  871  sudo -u postgres psql
+  872  psql --host=localhost --dbname=todo_list --username=todo_list_user
+  873  vim .profile
+  874  echo $TODO_LIST_DB_DSN
+  875  source .profile
+  876  echo $TODO_LIST_DB_DSN
+  877  psql $TODO_LIST_DB_DSN
+  878  code .
+  879  mkdir osborn
+  880  cd osborn
+  881  git clone https://github.com/OsbornCollins/todo.git
+  882  code .
+  883  code .
+  884  go run ./cmd/api/ -help
+  885  go run ./cmd/api/ 
+  886  psql $TODO_LIST_DB_DSN
+  887  git add .
+  888  git commit -m "config for database"
+  889  git push
+  890  git add .
+  891  git commit -m "set 3 parameter on the connection pool"
+  892  git push
+  893  migrate create -seq -ext=.sql -dir=./migrations create_todo_list_table
+  894  ls
+  895  migrate create -seq -ext=.sql -dir=./migrations add_todo_list_check_constraint
+  896  migrate create -seq -ext=.sql -dir=./migrations add_todo_list_indexes
+  897  migrate -path=./migrations -database=$TODO_LIST_DB_DSN up
+  898  migrate -path=./migrations -database=$TODO_LIST_DB_DSN down
+  899  migrate -path=./migrations -database=$TODO_LIST_DB_DSN up
+  900  migrate -path=./migrations -database=$TODO_LIST_DB_DSN down
+  901  migrate -path=./migrations -database=$TODO_LIST_DB_DSN up
+  902  git add .
+  903  git commit -m "get for todolist implemented"
+  904  git push
+  905  git add .
+  906  git commit -m "added validation for page, page size"
+  907  git add .
+  908  git commit -m "added filtering via query parameter"
+  909  git push
+  910  git add .
+  911  git commit -m "added full text search on inputs as well as a GIN index"
+  912  git push
+  913  git add .
+  914  git commit -m "added full text search on inputs as well as a GIN index"
+  915  git push
+  916  elm init
+  917  elm make src/Todo_list.elm --output Todo_list.js
+  918  go run ./cmd/api/
+  919  code .
+  920  history >> driane.txt
+  921  ls
+  922  grep "elm" driane.txt 
+  923  code .
+  924  code .
+  925  code .
+  926  cd Downloads/
+  927  curl -L https://github.com/golang-migrate/migrate/releases/download/v4.15.2/migrate.linux-amd64.tar.gz | tar xvz
+  928  ls
+  929  migrate --help
+  930  go run ./cmd/api/
+  931  BODY='{ "task_name": "driane",
+  932  	    "desription": "driane eieie",
+  933  		"notes": "drinaeeeee",
+  934  		"category": "501-655-5555",
+  935  		"priority": "drianeperez12@gmail.com",
+  936  		"status":["driane","driane"]}'
+  937  BODY='{ "task_name": "driane",
+  938  	    "desription": "driane eieie",
+  939  		"notes": "drinaeeeee",
+  940  		"category": "501-655-5555",
+  941  		"priority": "drianeperez12@gmail.com",
+  942  		"status":["driane","dri"]}'
+  943  clear
+  944  BODY='{"task_name":"Advance Web Quiz", "description":"Finish Advance Web Quiz 3 and have it submited", 
+  945  "notes":"Youtube video Required", "category":"School", "priority":"High", "status":["pending","in-progress","completed"]}'
+  946  curl -X POST -d "$BODY" localhost:4000/v1/todo_list
+  947  BODY='{"task_name":"Advance Web Quiz", "description":"Finish Advance Web Quiz 3 and have it submited", 
+  948  "notes":"Youtube video Required", "category":"School", "priority":"High", "status":["pending","in-progress","completed"]}'
+  949  curl -X POST -d "$BODY" localhost:4000/v1/todo_list
+  950  BODY='{"task_name":"Advance Web Quiz", "description":"Finish Advance Web Quiz 3 and have it submited", 
+  951  "notes":"Youtube video Required", "category":"School", "priority":"High", "status":["pending","in-progress","completed"]}'
+  952  curl -X POST -d "$BODY" localhost:4000/v1/todo_list
+  953  BODY='{"task_name":"", "description":"", 
+  954  "notes":"", "category":"", "priority":"", "status":[]}'
+  955  curl -X POST -d "$BODY" localhost:4000/v1/todo_list
+  956  curl -i localhost:4000/v1/todoitems/1
+  957  curl -i localhost:4000/v1/todo_list/1
+  958  curl -i localhost:4000/v1/todoitems
+  959  curl -i localhost:4000/v1/todo_list
+  960  curl -X PATCH -d '{"task_name":"Workout", "description":"Go to gym to ensure healthy living", 
+  961  "notes":"Arm and Chest Day", "category":"Gym", "priority":"Medium", "status":["pending","in-progress","completed"]}' localhost:4000/v1/todo_list/2
+  962  curl -X PATCH -d '{"task_name":"Workout"}' localhost:4000/v1/todo_list/2
+  963  curl -X PATCH -d '{"task_name":"kout"}' localhost:4000/v1/todo_list/2
+  964  curl -X DELETE localhost:4000/v1/todo_list/1
+  965  curl "localhost:4000/v1/todoitems?task_name=Advance&page=1&page_size=7&sort=-task_name"
+  966  curl -i localhost:4000/v1/todo_list
+  967  curl "localhost:4000/v1/todo_list?task_name=kout&page=1&page_size=7&sort=-task_name"
+  968  BODY='{"task_name":"Advance Web Quiz", "description":"Finish Advance Web Quiz 3 and have it submited", 
+  969  "notes":"Youtube video Required", "category":"School", "priority":"High", "status":["pending","in-progress","completed"]}'
+  970  curl -X POST -d "$BODY" localhost:4000/v1/todo_list
+  971  curl "localhost:4000/v1/todo_list?task_name=kout&page=1&page_size=7&sort=-task_name"
+  972  curl "localhost:4000/v1/todo_list?page=1&page_size=7&sort=-task_name"
+  973  curl "localhost:4000/v1/todo_list?page=1&page_size=7&sort=task_name"
+  974  git add .
+  975  git commit -m "final commit"
+  976  git push
+  977  ls
+  978  cd bin/
+  979  ls
+  980  cp make-go-dir my-lookup
+  981  ls
+  982  vim my-lookup 
+  983  go git add
+  984  git add
+  985  git add.
+  986  git add .
+  987  vim make-go-dir 
+  988  cd bin/
+  989  ls
+  990  vim my-lookup 
+  991  my-lookup driane driane
+  992  my-lookup driane.txt driane
+  993  vim my-lookup 
+  994  my-lookup driane driane
+  995  vim my-lookup 
+  996  my-lookup driane driane
+  997  my-lookup driane.txt driane
+  998  vim my-lookup 
+  999  my-lookup driane.txt driane
+ 1000  cd
+ 1001  my-lookup driane.txt driane
+ 1002  touch driane.txt
+ 1003  my-lookup driane.txt driane
+ 1004  vim my-lookup 
+ 1005  cd bin/
+ 1006  vim my-lookup 
+ 1007  touch driane.txt
+ 1008  vim driane.txt 
+ 1009  my-lookup driane.txt driane
+ 1010  my-lookup driane.txt perez
+ 1011  vim my-lookup 
+ 1012  my-lookup driane.txt perez
+ 1013  my-lookup driane.txt driane
+ 1014  cd
+ 1015  cd bin/
+ 1016  pwd
+ 1017  vim my-lookup 
+ 1018  my-lookup driane.txt driane
+ 1019  vim my-lookup 
+ 1020  my-lookup driane.txt driane
+ 1021  vim my-lookup 
+ 1022  my-lookup driane.txt driane
+ 1023  my-lookup driane.txt perez
+ 1024  vim my-lookup 
+ 1025  vim driane.txt 
+ 1026  my-lookup driane.txt perez
+ 1027  vim my-lookup 
+ 1028  my-lookup driane.txt perez
+ 1029  :wq
+ 1030  my-lookup driane.txt perez
+ 1031  my-lookup driane.txt driane
+ 1032  my-lookup driane.txt diojan
+ 1033  vim my-lookup 
+ 1034  my-lookup driane.xt diojan
+ 1035  my-lookup drianetxt diojan
+ 1036  my-lookup driane.txt diojan
+ 1037  my-lookup driane.txt perez
+ 1038  my-lookup drian.txt perez
+ 1039  my-lookup driane.txt perez
+ 1040  my-lookup driane.txt Perez
+ 1041  vim my-lookup 
+ 1042  my-lookup bin/driane.txt Perez
+ 1043  my-lookup bin/driane.txt perez
+ 1044  my-lookup driane.txt perez
+ 1045  mv driane.txt $HOME/driane.txt
+ 1046  ls
+ 1047  vim my-lookup 
+ 1048  my-lookup driane.txt perez
+ 1049  cd
+ 1050  vim driane.txt 
+ 1051  mv driane.txt names.txt
+ 1052  my-lookup names.txt Lewis
+ 1053  vim bin/my-lookup 
+ 1054  my-lookup names.txt Lewis
+ 1055  vim names.txt 
+ 1056  my-lookup names.txt Lewis
+ 1057  vim names.txt 
+ 1058  my-lookup names.txt Lewis
+ 1059  vim bin/my-lookup 
+ 1060  my-lookup names.txt Lewis
+ 1061  vim bin/my-lookup 
+ 1062  my-lookup names.txt Lewis
+ 1063  vim bin/my-lookup 
+ 1064  my-lookup names.txt Lewis
+ 1065  vim bin/my-lookup 
+ 1066  my-lookup names.txt Lewis
+ 1067  vim bin/my-lookup 
+ 1068  my-lookup names.txt Lewis
+ 1069  vim bin/my-lookup 
+ 1070  my-lookup names.txt Lewis
+ 1071  vim bin/my-lookup 
+ 1072  my-lookup names.txt Lewis
+ 1073  vim bin/my-lookup 
+ 1074  my-lookup names.txt Lewis
+ 1075  wq
+ 1076  vim bin/my-lookup 
+ 1077  my-lookup names.txt Lewis
+ 1078  vim bin/my-lookup 
+ 1079  my-lookup names.txt Lewis
+ 1080  vim bin/my-lookup 
+ 1081  my-lookup names.txt Lewis
+ 1082  vim bin/my-lookup 
+ 1083  my-lookup names.txt Lewis
+ 1084  vim bin/my-lookup 
+ 1085  my-lookup names.txt Lewis
+ 1086  vim bin/my-lookup 
+ 1087  my-lookup names.txt Lewis
+ 1088  vim bin/my-lookup 
+ 1089  vim names.txt 
+ 1090  my-lookup names.txt Lewis
+ 1091  :wq
+ 1092  my-lookup names.txt Lewis
+ 1093  vim bin/my-lookup 
+ 1094  my-lookup names.txt Lewis
+ 1095  vim bin/my-lookup 
+ 1096  my-lookup names.txt Lewis
+ 1097  wq
+ 1098  vim bin/my-lookup 
+ 1099  my-lookup names.txt Lewis
+ 1100  vim bin/my-lookup 
+ 1101  my-lookup names.txt Lewis
+ 1102  vim bin/my-lookup 
+ 1103  my-lookup names.txt Lewis
+ 1104  vim bin/my-lookup 
+ 1105  my-lookup names.txt Lewis
+ 1106  vim bin/my-lookup 
+ 1107  my-lookup names.txt Lewis
+ 1108  vim bin/my-lookup 
+ 1109  my-lookup names.txt Lewis
+ 1110  vim bin/my-lookup 
+ 1111  my-lookup names.txt Lewis
+ 1112  vim bin/my-lookup 
+ 1113  my-lookup names.txt Lewis
+ 1114  vim bin/my-lookup 
+ 1115  grep 
+ 1116  vim bin/my-lookup 
+ 1117  grep -P '[a-zA-Z]* Lewis' names.txt 
+ 1118  grep -P '[a-zA-Z]+ Lewis' names.txt 
+ 1119  grep -P '[a-zA-Z]+Lewis' names.txt 
+ 1120  grep -P '[a-zA-Z] + Lewis' names.txt 
+ 1121  grep -P '([a-zA-Z] )+ Lewis' names.txt 
+ 1122  grep -P '([a-zA-Z])+ Lewis' names.txt 
+ 1123  grep -P '([a-zA-Z])+ ([a-zA-Z])+ Lewis' names.txt 
+ 1124  grep -P '([a-zA-Z])+([a-zA-Z])+ Lewis' names.txt 
+ 1125  grep -P '([a-zA-Z])+  ([a-zA-Z])+ Lewis' names.txt 
+ 1126  grep -P '([a-zA-Z])+ ([a-zA-Z])+ Lewis' names.txt 
+ 1127  grep -P '[a-zA-Z]* Lewis' names.txt 
+ 1128  grep -P '[a-zA-Z] * Lewis' names.txt 
+ 1129  grep -P '([a-zA-Z] )* Lewis' names.txt 
+ 1130  grep -P '([a-zA-Z] )*Lewis' names.txt 
+ 1131  grep -P '^([a-zA-Z] )*Lewis' names.txt 
+ 1132  grep -P '^[a-zA-Z] ([a-zA-Z] )*Lewis' names.txt 
+ 1133  grep -P '^[a-zA-Z] Lewis' names.txt 
+ 1134  grep -P '^(a-z) Lewis' names.txt 
+ 1135  grep -P '^(a-z) Lewis$' names.txt 
+ 1136  grep -P 'Lewis$' names.txt 
+ 1137  grep -P ' Lewis$' names.txt 
+ 1138  grep -P '[a-z-A-Z] Lewis$' names.txt 
+ 1139  grep -P ' [a-z-A-Z] Lewis$' names.txt 
+ 1140  grep -P ' [a-z-A-Z]* Lewis$' names.txt 
+ 1141  grep -P '[a-z-A-Z]* Lewis$' names.txt 
+ 1142  grep -P '[a-z-A-Z]+ Lewis$' names.txt 
+ 1143  vim names.txt 
+ 1144  grep -P '[a-z-A-Z]+ Lewis$' names.txt 
+ 1145  grep -P ' [a-z-A-Z]+ Lewis$' names.txt 
+ 1146  grep -P '[a-z-A-Z] + Lewis$' names.txt 
+ 1147  grep -P '[a-z-A-Z ]+ Lewis$' names.txt 
+ 1148  grep -P '[a-z-A-Z ]+Lewis$' names.txt 
+ 1149  grep -P '[a-z-A-Z]+Lewis$' names.txt 
+ 1150  grep -P '[a-z-A-Z]+ Lewis$' names.txt 
+ 1151  grep -P '([a-z-A-Z]+ ) Lewis$' names.txt 
+ 1152  grep -P '([a-z-A-Z]+ )+ Lewis$' names.txt 
+ 1153  grep -P '([a-z-A-Z]+ )+Lewis$' names.txt 
+ 1154  grep -P '([a-z-A-Z]+)+ Lewis$' names.txt 
+ 1155  grep -P '([a-z-A-Z]+ )+ Lewis$' names.txt 
+ 1156  grep -P '([a-z-A-Z]+ )+Lewis$' names.txt 
+ 1157  vim names.txt 
+ 1158  grep -P '([a-z-A-Z]+ )+Lewis$' names.txt 
+ 1159  vim names.txt 
+ 1160  grep -P '([a-z-A-Z]+ )+Lewis$' names.txt 
+ 1161  vim bin/my-lookup 
+ 1162  my-lookup names.txt Lewis
+ 1163  vim names.txt 
+ 1164  my-lookup names.txt Lewis
+ 1165  vim bin/my-lookup 
+ 1166  my-lookup names.txt Lewis
+ 1167  vim bin/my-lookup 
+ 1168  my-lookup names.txt Lewis
+ 1169  vim bin/my-lookup 
+ 1170  grep -P '/^[a-z ,.'-]+$/i' names.txt 
+ 1171  grep -P '/^[a-z ,.'-]+$/i' names.txt
+ 1172  grep -P '/^[a-z ,.'-]+$/' names.txt
+ 1173  grep -P /^[a-z ,.'-]+$/i names.txt
+ 1174  grep -P '^[a-z ,.'-]+$' names.txt
+ 1175  grep -P '([a-z-A-Z]+ )+Lewis$' names.txt 
+ 1176  grep -P '^[a-z ,.'-]+$' names.txt
+ 1177  kd
+ 1178  d
+ 1179  d
+ 1180  d
+ 1181  d
+ 1182  dd
+ 1183  grep -P "^[a-z ,.'-]+$" names.txt
+ 1184  grep -P '^[a-z ,.-]+$' names.txt
+ 1185  grep -P '([a-z-A-Z]+ )+Lewis$' names.txt 
+ 1186  grep -P "^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)" names.txt
+ 1187  grep -P "^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)Lewis$" names.txt
+ 1188  grep -P "^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?Lewis$)" names.txt
+ 1189  grep -P "^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)" names.txt
+ 1190  grep -P '([a-z-A-Z]{2,} )+Lewis$' names.txt 
+ 1191  grep -P '([a-z-A-Z]{1,} )+Lewis$' names.txt 
+ 1192  grep -P '([a-z-A-Z]{0,} )+Lewis$' names.txt 
+ 1193  grep -P '([a-z-A-Z]{1,1} )+Lewis$' names.txt 
+ 1194  grep -P '([a-z-A-Z]{1,8} )+Lewis$' names.txt 
+ 1195  vim bin/my-lookup 
+ 1196  my-lookup names.txt Lewis
+ 1197  vim bin/my-lookup 
+ 1198  my-lookup names.txt Lewis
+ 1199  vim bin/my-lookup 
+ 1200  my-lookup names.txt Lewis
+ 1201  vim bin/my-lookup 
+ 1202  my-lookup names.txt Lewis
+ 1203  cat names.txt 
+ 1204  vim bin/my-lookup 
+ 1205  my-lookup names.txt Lewis
+ 1206  grep -P '([a-z-A-Z] )+Lewis$' names.txt 
+ 1207  grep -P '([a-z-A-Z]+ )+Lewis$' names.txt 
+ 1208  grep -P '[a-z-A-Z]+ Lewis$' names.txt 
+ 1209  grep -P '[a-z-A-Z] +Lewis$' names.txt 
+ 1210  grep -P '([a-z-A-Z]+ )+Lewis$' names.txt 
+ 1211  vim bin/my-lookup 
+ 1212  my-lookup names.txt Lewis
+ 1213  cat names.txt 
+ 1214  cd bin-example/
+ 1215  git status
+ 1216  git add .
+ 1217  git commit -m "new lines of code added"
+ 1218  gitn push
+ 1219  git push
+ 1220  git init
+ 1221  echo "# CMPS4232-Test-2" >> README.md
+ 1222  git add .
+ 1223  git commit -m "first commit"
+ 1224  git branch -M main
+ 1225  git remote add origin git@github.com:SENOVOYT/CMPS4232-Test-2.git
+ 1226  git push -u origin main
+ 1227  vim my-lookup 
+ 1228  ls
+ 1229  vim my-lookup 
+ 1230  mkdir james gro
+ 1231  mkdir james_gro
+ 1232  git clone https://github.com/Kingjamesx2/grocery.git 
+ 1233  cdoe .
+ 1234  code .
+ 1235  history > tetx.txt
