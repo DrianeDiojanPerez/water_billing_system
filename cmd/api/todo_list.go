@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"quiz.3.driane.perez.net/internal/data"
-	"quiz.3.driane.perez.net/internal/validator"
+	"water.biling.system.driane.perez.net/internal/data"
+	"water.biling.system.driane.perez.net/internal/validator"
 )
 
 // create entires hander for the POST /v1/entries endpoint

@@ -12,7 +12,7 @@ import (
 	"time"
 
 	_ "github.com/lib/pq"
-	"quiz.3.driane.perez.net/internal/data"
+	"water.biling.system.driane.perez.net/internal/data"
 )
 
 // The Application version number

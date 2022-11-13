@@ -12,7 +12,7 @@ import (
 	"strings"
 
 	"github.com/julienschmidt/httprouter"
-	"quiz.3.driane.perez.net/internal/validator"
+	"water.biling.system.driane.perez.net/internal/validator"
 )
 
 // Define a new type name envelope

@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/lib/pq"
-	"quiz.3.driane.perez.net/internal/validator"
+	"water.biling.system.driane.perez.net/internal/validator"
 )
 
 type Todo_list struct {

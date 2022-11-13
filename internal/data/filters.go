@@ -6,7 +6,7 @@ import (
 	"math"
 	"strings"
 
-	"quiz.3.driane.perez.net/internal/validator"
+	"water.biling.system.driane.perez.net/internal/validator"
 )
 
 type Filters struct {
