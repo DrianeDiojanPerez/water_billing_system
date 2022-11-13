@@ -45,7 +45,7 @@ func main() {
 	//read in the flags that are needed to populate our config
 	flag.IntVar(&cfg.port, "port", 4000, "API server port")
 	flag.StringVar(&cfg.env, "env", "development", "Environment (development | stagging | production )")
-	flag.StringVar(&cfg.db.dsn, "db-dsn", os.Getenv("TODO_LIST_DB_DSN"), "PostgresSQL DSN")
+	flag.StringVar(&cfg.db.dsn, "db-dsn", os.Getenv("WATER_DB_DSN"), "PostgresSQL DSN")
 	flag.IntVar(&cfg.db.maxOpenConnection, "db-max-open-connection", 25, "PostgreSQL max open connection")
 	flag.IntVar(&cfg.db.maxIdleConnection, "db-max-idle-connection", 25, "PostgreSQL max idle connection")
 	flag.StringVar(&cfg.db.maxIdleTime, "db-max-idle-time", "15m", "PostgreSQL max idle time")
