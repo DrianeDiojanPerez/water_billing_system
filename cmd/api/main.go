@@ -13,6 +13,7 @@ import (
 
 	_ "github.com/lib/pq"
 	"water.biling.system.driane.perez.net/internal/data"
+	"water.biling.system.driane.perez.net/internal/jsonlog"
 )
 
 // The Application version number
@@ -35,7 +36,7 @@ type config struct {
 // Dependency Injection
 type application struct {
 	config config
-	logger *log.Logger
+	logger *jsonlog.Logger
 	models data.Models
 }
 
@@ -51,16 +52,16 @@ func main() {
 	flag.StringVar(&cfg.db.maxIdleTime, "db-max-idle-time", "15m", "PostgreSQL max idle time")
 	flag.Parse()
 	//create a logger
-	logger := log.New(os.Stdout, "", log.Ldate|log.Ltime)
+	logger := jsonlog.New(os.Stdout, jsonlog.LevelInfo)
 	//create the connection pool
 	db, err := openDB(cfg)
 	if err != nil {
-		logger.Fatal(err)
+		logger.PrintFatal(err, nil)
 	}
 	//close the connection to the db
 	defer db.Close()
 	//Log the seccessful connection pool
-	logger.Println("Database connection pool Established")
+	logger.PrintInfo("database connection pool established", nil)
 	//create an instance of our application struct
 	app := &application{
 		config: cfg,
@@ -74,14 +75,18 @@ func main() {
 	srv := &http.Server{
 		Addr:         fmt.Sprintf(":%d", cfg.port),
 		Handler:      app.routes(), // using the routes function from routes,go
+		ErrorLog: 	  log.New(logger,"",0),
 		IdleTimeout:  time.Minute,
 		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 30 * time.Second,
 	}
 	//start our server
-	logger.Printf("starting %s server on %s", cfg.env, srv.Addr)
+	logger.PrintInfo("starting server",map[string]string{
+		"addr":srv.Addr,
+		"env":cfg.env,
+	})
 	err = srv.ListenAndServe()
-	logger.Fatal(err)
+	logger.PrintFatal(err,nil)
 
 }
 

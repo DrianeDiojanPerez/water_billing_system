@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"github.com/julienschmidt/httprouter"
 )
-func (app *application) routes () *httprouter.Router{
+func (app *application) routes () http.Handler{
 	//create a new httprouter router instance
 	router := httprouter.New()
 	router.NotFound = http.HandlerFunc(app.notFoundResponse)
@@ -18,5 +18,6 @@ func (app *application) routes () *httprouter.Router{
 	router.HandlerFunc(http.MethodGet, "/v1/todo_list/:id", app.showtodo_listHandler)
 	router.HandlerFunc(http.MethodPatch, "/v1/todo_list/:id", app.updateTodo_listHandler)
 	router.HandlerFunc(http.MethodDelete, "/v1/todo_list/:id", app.deleteTodo_listItemHandler)
-	return router
+	//we wrap router with recoverpanic will call router if everthing is okay
+	return app.recoverPanic(router)
 }
