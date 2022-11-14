@@ -5,10 +5,8 @@ import (
 	"context"
 	"database/sql"
 	"flag"
-	"fmt"
-	"log"
-	"net/http"
 	"os"
+	"sync"
 	"time"
 
 	_ "github.com/lib/pq"
@@ -43,6 +41,7 @@ type application struct {
 	config config
 	logger *jsonlog.Logger
 	models data.Models
+	wg     sync.WaitGroup
 }
 
 func main() {
@@ -60,7 +59,6 @@ func main() {
 	flag.IntVar(&cfg.limiter.burst, "limiter-burst", 4, "Rate limiter maximum burst")
 	flag.BoolVar(&cfg.limiter.enabled, "limiter-enabled", true, "Enable rate limiter")
 
-	
 	flag.Parse()
 	//create a logger
 	logger := jsonlog.New(os.Stdout, jsonlog.LevelInfo)
@@ -79,27 +77,13 @@ func main() {
 		logger: logger,
 		models: data.NewModels(db),
 	}
-	//Create our new servermux
-	mux := http.NewServeMux()
-	mux.HandleFunc("/v1/healthcheck", app.healthcheckHandler)
-	//create our Http server
-	srv := &http.Server{
-		Addr:         fmt.Sprintf(":%d", cfg.port),
-		Handler:      app.routes(), // using the routes function from routes,go
-		ErrorLog: 	  log.New(logger,"",0),
-		IdleTimeout:  time.Minute,
-		ReadTimeout:  10 * time.Second,
-		WriteTimeout: 30 * time.Second,
+	// Call app.serve to start the server
+	err = app.serve()
+	if err != nil {
+		logger.PrintFatal(err, nil)
 	}
-	//start our server
-	logger.PrintInfo("starting server",map[string]string{
-		"addr":srv.Addr,
-		"env":cfg.env,
-	})
-	err = srv.ListenAndServe()
-	logger.PrintFatal(err,nil)
-
 }
+
 
 // openDB() function returns a pointer *sql.DB connection pool
 func openDB(cfg config) (*sql.DB, error) {
