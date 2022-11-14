@@ -18,6 +18,13 @@ func (app *application) routes () http.Handler{
 	router.HandlerFunc(http.MethodGet, "/v1/todo_list/:id", app.showtodo_listHandler)
 	router.HandlerFunc(http.MethodPatch, "/v1/todo_list/:id", app.updateTodo_listHandler)
 	router.HandlerFunc(http.MethodDelete, "/v1/todo_list/:id", app.deleteTodo_listItemHandler)
+
+	router.HandlerFunc(http.MethodPost, "/v1/users", app.registerUserHandler)
+
+
+
+
+
 	//we wrap router with recoverpanic will call router if everthing is okay
 	//then we pass to the rate limit and the process the actual request
 	return app.recoverPanic(app.rateLimit(router))
