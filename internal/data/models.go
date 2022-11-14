@@ -16,6 +16,7 @@ var (
 
 type Models struct {
 	Todo_list Todo_listModel
+	Tokens TokenModel
 	Users UserModel
 }
 
@@ -23,6 +24,8 @@ type Models struct {
 func NewModels(db *sql.DB) Models {
 	return Models{
 		Todo_list: Todo_listModel{DB: db},
+		Tokens: TokenModel{DB: db},
 		Users: UserModel{DB: db},
+		
 	}
 }
