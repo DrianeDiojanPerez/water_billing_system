@@ -16,11 +16,13 @@ var (
 
 type Models struct {
 	Todo_list Todo_listModel
+	Users UserModel
 }
 
 // NewModels() allows us to create a new Models
 func NewModels(db *sql.DB) Models {
 	return Models{
 		Todo_list: Todo_listModel{DB: db},
+		Users: UserModel{DB: db},
 	}
 }
