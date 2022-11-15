@@ -3,7 +3,7 @@
 CREATE TABLE IF NOT EXISTS water_system (
     id bigserial PRIMARY KEY,
     created_at timestamp(0) with time zone NOT NULL DEFAULT NOW(),
-    task_name text NOT NULL,
+    waterbill text NOT NULL,
     description text NOT NULL,
     notes text NOT NULL,
     category text NOT NULL,

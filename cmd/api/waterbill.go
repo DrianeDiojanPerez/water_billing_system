@@ -14,7 +14,7 @@ import (
 func (app *application) createtodo_listHandler(w http.ResponseWriter, r *http.Request) {
 	//our target decode destination
 	var todo_listtodolistdata struct {
-		Task_Name   string   `json:"task_name"`
+		Waterbill   string   `json:"waterbill"`
 		Description string   `json:"description"`
 		Notes       string   `json:"notes"`
 		Category    string   `json:"category"`
@@ -28,7 +28,7 @@ func (app *application) createtodo_listHandler(w http.ResponseWriter, r *http.Re
 	}
 	//copyung the values
 	entries := &data.Todo_list{
-		Task_Name:   todo_listtodolistdata.Task_Name,
+		Waterbill:   todo_listtodolistdata.Waterbill,
 		Description: todo_listtodolistdata.Description,
 		Notes:       todo_listtodolistdata.Notes,
 		Category:    todo_listtodolistdata.Category,
@@ -116,7 +116,7 @@ func (app *application) updateTodo_listHandler(w http.ResponseWriter, r *http.Re
 	// if a field remains nil then we know that the client did not update it
 	//create an input struct to hold the todo_list data
 	var todolistdata struct {
-		Task_Name   *string  `json:"task_name"`
+		Waterbill   *string  `json:"waterbill"`
 		Description *string  `json:"description"`
 		Notes       *string  `json:"notes"`
 		Category    *string  `json:"category"`
@@ -131,8 +131,8 @@ func (app *application) updateTodo_listHandler(w http.ResponseWriter, r *http.Re
 		return
 	}
 	// Check for updates
-	if todolistdata.Task_Name != nil {
-		todolist.Task_Name = *todolistdata.Task_Name
+	if todolistdata.Waterbill != nil {
+		todolist.Waterbill = *todolistdata.Waterbill
 	}
 	if todolistdata.Description != nil {
 		todolist.Description = *todolistdata.Description
@@ -208,7 +208,7 @@ func (app *application) deleteTodo_listItemHandler(w http.ResponseWriter, r *htt
 func (app *application) listtodo_listHandler(w http.ResponseWriter, r *http.Request) {
 	// Create an input struct to hold our query parameter
 	var input struct {
-		Task_Name string
+		Waterbill string
 		Priority  string
 		Status    []string
 		data.Filters
@@ -218,7 +218,7 @@ func (app *application) listtodo_listHandler(w http.ResponseWriter, r *http.Requ
 	// Get the URL values map
 	qs := r.URL.Query()
 	// use the helper methods to extract values
-	input.Task_Name = app.readString(qs, "task_name", "")
+	input.Waterbill = app.readString(qs, "waterbill", "")
 	input.Priority = app.readString(qs, "priority", "")
 	input.Status = app.readCSV(qs, "status", []string{})
 	// Get the page information using the read int method
@@ -227,14 +227,14 @@ func (app *application) listtodo_listHandler(w http.ResponseWriter, r *http.Requ
 	// Get the sort information
 	input.Filters.Sort = app.readString(qs, "sort", "id")
 	// Specify the allowed sort values
-	input.Filters.SortList = []string{"id", "task_name", "priority", "-id", "-task_name", "-priority"}
+	input.Filters.SortList = []string{"id", "waterbill", "priority", "-id", "-waterbill", "-priority"}
 	// Check for validation errors
 	if data.ValidateFilters(v, input.Filters); !v.Valid() {
 		app.failedValidationResponse(w, r, v.Errors)
 		return
 	}
 	// Get a listing of all todo items
-	todo_list, metadata, err := app.models.Todo_list.GetAll(input.Task_Name, input.Priority, input.Status, input.Filters)
+	todo_list, metadata, err := app.models.Todo_list.GetAll(input.Waterbill, input.Priority, input.Status, input.Filters)
 	if err != nil {
 		app.serverErrorResponse(w, r, err)
 		return

@@ -15,7 +15,7 @@ import (
 type Todo_list struct {
 	ID          int64     `json:"id"`
 	CreatedAt   time.Time `json:"-"`
-	Task_Name   string    `json:"task_name"`
+	Waterbill   string    `json:"waterbill"`
 	Description string    `json:"description"`
 	Notes       string    `json:"notes"`
 	Category    string    `json:"category"`
@@ -26,8 +26,8 @@ type Todo_list struct {
 
 func ValidateEntires(v *validator.Validator, entries *Todo_list) {
 	//use the check method to execute our validation checks
-	v.Check(entries.Task_Name != "", "task_name", "must be provided")
-	v.Check(len(entries.Task_Name) <= 200, "task_name", "must not be more than 200 bytes long")
+	v.Check(entries.Waterbill != "", "waterbill", "must be provided")
+	v.Check(len(entries.Waterbill) <= 200, "waterbill", "must not be more than 200 bytes long")
 
 	v.Check(entries.Description != "", "description", "must be provided")
 	v.Check(len(entries.Description) <= 200, "description", "must not be more than 200 bytes long")
@@ -56,7 +56,7 @@ type Todo_listModel struct {
 // Insert() allows us to create a new todo_list
 func (m Todo_listModel) Insert(Todo_list *Todo_list) error {
 	query := `
-	INSERT INTO todo_list (task_name, description, notes, category, priority, status)
+	INSERT INTO todo_list (waterbill, description, notes, category, priority, status)
 	VALUES ($1, $2, $3, $4, $5, $6)
 	RETURNING id, created_at, version
 	`
@@ -66,7 +66,7 @@ func (m Todo_listModel) Insert(Todo_list *Todo_list) error {
 
 	// Collect the data fields into a slice
 	args := []interface{}{
-		Todo_list.Task_Name,
+		Todo_list.Waterbill,
 		Todo_list.Description,
 		Todo_list.Notes,
 		Todo_list.Category,
@@ -84,7 +84,7 @@ func (m Todo_listModel) Get(id int64) (*Todo_list, error) {
 	}
 	// Create query
 	query := `
-		SELECT id, created_at, task_name, description, notes, category, priority, status, version
+		SELECT id, created_at, waterbill, description, notes, category, priority, status, version
 		FROM todo_list
 		WHERE id = $1
 	`
@@ -99,7 +99,7 @@ func (m Todo_listModel) Get(id int64) (*Todo_list, error) {
 	err := m.DB.QueryRowContext(ctx, query, id).Scan(
 		&todo_list.ID,
 		&todo_list.CreatedAt,
-		&todo_list.Task_Name,
+		&todo_list.Waterbill,
 		&todo_list.Description,
 		&todo_list.Notes,
 		&todo_list.Category,
@@ -127,7 +127,7 @@ func (m Todo_listModel) Update(Todo_list *Todo_list) error {
 	//created a query
 	query := `
 	UPDATE todo_list 
-	set task_name = $1,
+	set waterbill = $1,
 	description = $2, 
 	notes = $3,
 	category = $4, 
@@ -143,7 +143,7 @@ func (m Todo_listModel) Update(Todo_list *Todo_list) error {
 	defer cancel()
 
 	args := []interface{}{
-		Todo_list.Task_Name,
+		Todo_list.Waterbill,
 		Todo_list.Description,
 		Todo_list.Notes,
 		Todo_list.Category,
@@ -198,18 +198,18 @@ func (m Todo_listModel) Delete(id int64) error {
 }
 
 // The GetAll() returns a list of all the todo items sorted by ID
-func (m Todo_listModel) GetAll(task_name string, priority string, status []string, filters Filters) ([]*Todo_list, Metadata, error) {
+func (m Todo_listModel) GetAll(waterbill string, priority string, status []string, filters Filters) ([]*Todo_list, Metadata, error) {
 	// Construct the query
 	query := fmt.Sprintf(`
 		SELECT COUNT(*) OVER(), 
 		id, created_at, 
-		task_name, description, 
+		waterbill, description, 
 		notes, category, 
 		priority, 
 		status, 
 		version
 		FROM todo_list
-		WHERE (to_tsvector('simple',task_name) @@ plainto_tsquery('simple', $1) OR $1 = '')
+		WHERE (to_tsvector('simple',waterbill) @@ plainto_tsquery('simple', $1) OR $1 = '')
 		AND (to_tsvector('simple',priority) @@ plainto_tsquery('simple', $2) OR $2 = '')
 		AND (status @> $3 OR $3 = '{}')
 		ORDER BY %s %s, id ASC
@@ -218,7 +218,7 @@ func (m Todo_listModel) GetAll(task_name string, priority string, status []strin
 	// Create a 3-second-timeout context
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
-	args := []interface{}{task_name, priority, pq.Array(status), filters.limit(), filters.offset()}
+	args := []interface{}{waterbill, priority, pq.Array(status), filters.limit(), filters.offset()}
 	// Execute query
 	rows, err := m.DB.QueryContext(ctx, query, args...)
 	if err != nil {
@@ -237,7 +237,7 @@ func (m Todo_listModel) GetAll(task_name string, priority string, status []strin
 			&totalRecords,
 			&todo_List.ID,
 			&todo_List.CreatedAt,
-			&todo_List.Task_Name,
+			&todo_List.Waterbill,
 			&todo_List.Description,
 			&todo_List.Notes,
 			&todo_List.Category,
