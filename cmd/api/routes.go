@@ -12,12 +12,12 @@ func (app *application) routes () http.Handler{
 	router.MethodNotAllowed = http.HandlerFunc(app.methodNotAllowedResponse)
 	router.HandlerFunc(http.MethodGet, "/v1/healthcheck", app.healthcheckHandler)
 
-	router.HandlerFunc(http.MethodGet, "/v1/todo_list", app.listtodo_listHandler)
+	router.HandlerFunc(http.MethodGet, "/v1/waterbill", app.waterbill_listHandler)
 
-	router.HandlerFunc(http.MethodPost, "/v1/todo_list", app.createtodo_listHandler)
-	router.HandlerFunc(http.MethodGet, "/v1/todo_list/:id", app.showtodo_listHandler)
-	router.HandlerFunc(http.MethodPatch, "/v1/todo_list/:id", app.updateTodo_listHandler)
-	router.HandlerFunc(http.MethodDelete, "/v1/todo_list/:id", app.deleteTodo_listItemHandler)
+	router.HandlerFunc(http.MethodPost, "/v1/waterbill", app.createwaterbill_listHandler)
+	router.HandlerFunc(http.MethodGet, "/v1/waterbill/:id", app.showwaterbill_listHandler)
+	router.HandlerFunc(http.MethodPatch, "/v1/waterbill/:id", app.updatewaterbill_listHandler)
+	router.HandlerFunc(http.MethodDelete, "/v1/waterbill/:id", app.deletewaterbill_listItemHandler)
 
 	router.HandlerFunc(http.MethodPost, "/v1/users", app.registerUserHandler)
 	router.HandlerFunc(http.MethodPut, "/v1/users/activated", app.activateUserHandler)

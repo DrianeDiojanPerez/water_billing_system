@@ -11,7 +11,7 @@ import (
 )
 
 // create entires hander for the POST /v1/entries endpoint
-func (app *application) createtodo_listHandler(w http.ResponseWriter, r *http.Request) {
+func (app *application) createwaterbill_listHandler(w http.ResponseWriter, r *http.Request) {
 	//our target decode destination
 	var todo_listtodolistdata struct {
 		Waterbill   string   `json:"waterbill"`
@@ -61,7 +61,7 @@ func (app *application) createtodo_listHandler(w http.ResponseWriter, r *http.Re
 }
 
 // create showentires hander for the GET /v1/entries/:id endpoint
-func (app *application) showtodo_listHandler(w http.ResponseWriter, r *http.Request) {
+func (app *application) showwaterbill_listHandler(w http.ResponseWriter, r *http.Request) {
 
 	id, err := app.readIDParam(r)
 	if err != nil {
@@ -90,7 +90,7 @@ func (app *application) showtodo_listHandler(w http.ResponseWriter, r *http.Requ
 
 }
 
-func (app *application) updateTodo_listHandler(w http.ResponseWriter, r *http.Request) {
+func (app *application) updatewaterbill_listHandler(w http.ResponseWriter, r *http.Request) {
 	// This method does a partial replacement
 	// Get the id for the todo_list item that needs updating
 	id, err := app.readIDParam(r)
@@ -178,7 +178,7 @@ func (app *application) updateTodo_listHandler(w http.ResponseWriter, r *http.Re
 
 }
 // The deleteTodo_listItemHandler() allows the user to delete a todo_list item from the databse by using the ID
-func (app *application) deleteTodo_listItemHandler(w http.ResponseWriter, r *http.Request) {
+func (app *application) deletewaterbill_listItemHandler(w http.ResponseWriter, r *http.Request) {
 	id, err := app.readIDParam(r)
 	if err != nil {
 		app.notFoundResponse(w, r)
@@ -205,7 +205,7 @@ func (app *application) deleteTodo_listItemHandler(w http.ResponseWriter, r *htt
 }
 // The listtodo_listHandler() allows the client to see a listing of todo items
 // based on a set criteria
-func (app *application) listtodo_listHandler(w http.ResponseWriter, r *http.Request) {
+func (app *application) waterbill_listHandler(w http.ResponseWriter, r *http.Request) {
 	// Create an input struct to hold our query parameter
 	var input struct {
 		Waterbill string
