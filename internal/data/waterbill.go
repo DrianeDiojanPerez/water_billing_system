@@ -56,7 +56,7 @@ type Todo_listModel struct {
 // Insert() allows us to create a new todo_list
 func (m Todo_listModel) Insert(Todo_list *Todo_list) error {
 	query := `
-	INSERT INTO todo_list (waterbill, description, notes, category, priority, status)
+	INSERT INTO water_system (waterbill, description, notes, category, priority, status)
 	VALUES ($1, $2, $3, $4, $5, $6)
 	RETURNING id, created_at, version
 	`
@@ -85,7 +85,7 @@ func (m Todo_listModel) Get(id int64) (*Todo_list, error) {
 	// Create query
 	query := `
 		SELECT id, created_at, waterbill, description, notes, category, priority, status, version
-		FROM todo_list
+		FROM water_system
 		WHERE id = $1
 	`
 	// Declare a Todo_list variable to hold the return data
@@ -126,7 +126,7 @@ func (m Todo_listModel) Get(id int64) (*Todo_list, error) {
 func (m Todo_listModel) Update(Todo_list *Todo_list) error {
 	//created a query
 	query := `
-	UPDATE todo_list 
+	UPDATE water_system 
 	set waterbill = $1,
 	description = $2, 
 	notes = $3,
@@ -173,7 +173,7 @@ func (m Todo_listModel) Delete(id int64) error {
 	}
 	// Create the delete query
 	query := `
-		DELETE FROM todo_list
+		DELETE FROM water_system
 		WHERE id = $1
 	`
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
@@ -208,7 +208,7 @@ func (m Todo_listModel) GetAll(waterbill string, priority string, status []strin
 		priority, 
 		status, 
 		version
-		FROM todo_list
+		FROM water_system
 		WHERE (to_tsvector('simple',waterbill) @@ plainto_tsquery('simple', $1) OR $1 = '')
 		AND (to_tsvector('simple',priority) @@ plainto_tsquery('simple', $2) OR $2 = '')
 		AND (status @> $3 OR $3 = '{}')

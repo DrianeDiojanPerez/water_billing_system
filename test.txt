@@ -16,25 +16,31 @@ curl -w '\nTime: %{time_total}\n' -d "$BODY" localhost:4000/v1/users
 BODY='{"name":"", "email":"elishaine@gmail.com", "password":"appletree"}'
 curl -w '\nTime: %{time_total}\n' -d "$BODY" localhost:4000/v1/users
 
-BODY='{"waterbill":"Desire Amagwula", "description":"You only get one chance to live, make the most of it", "Status":["inspirational", "life-changing"]}'
-BODY='{"waterbill":"JK Rowling", "description":"Fear of a name increases fear of the thing itself.", "Status":["inspirational", "life-changing"]}'
-BODY='{"waterbill":"Vachel Lindsay", "notes":"Vachel Lindsay","description":"Never be a cynic, even a gentle one. Never help out a sneer, even at the devil.", "Status":["inspirational", "life-changing"]}'
-
-		Description string   `json:"description"`
-		Notes       string   `json:"notes"`
-		Category    string   `json:"category"`
-		Priority    string   `json:"priority"`
-	}
 
 
+BODY='{"waterbill":"Vachel Lindsay", 
+"description":"Never be a cynic, even a gentle one. Never help out a sneer, even at the devil.",
+"notes":"Vachel Lindsay",
+"category":"Vachel Lindsay", 
+"Priority":"Vachel Lindsay", 
+"Status":["inspirational", "life-changing"]}'
 
-curl -i -d "$BODY" localhost:4000/v1/Quotes (insert into the database)
-curl localhost:4000/v1/Quotes (show the database)
-curl -i localhost:4000/v1/Quotes/1 
-curl -X PATCH -d '{"author":"Desire Amagwula"}' localhost:4000/v1/Quotes/1
-curl -X DELETE localhost:4000/v1/Quotes/2
-curl -w '\nTime: %{time_total}s \n' -i localhost:4000/v1/Quotes/1
-curl "localhost:4000/v1/Quotes?sort=author"
-curl "localhost:4000/v1/Quotes?page=1&page_size=20"
-curl "localhost:4000/v1/Quotes?page=1220&page_size=200&sort=author"
-curl "localhost:4000/v1/Quotes?page=0&page_size=-1&sort=author"
+
+BODY='{"waterbill":"Vachdssdel Lindsay", 
+"description":"Never besddsthe devil.",
+"notes":"Vachel sddsLindsay",
+"category":"Vachel fdsgfgLindsay", 
+"Priority":"Vachel fgfgfgfgLindsay", 
+"Status":["inspirational", "life-changing"]}'
+
+
+curl -i -d "$BODY" localhost:4000/v1/waterbill (insert into the database)
+curl localhost:4000/v1/waterbill (show the database)
+curl -i localhost:4000/v1/waterbill/1 
+curl -X PATCH -d '{"waterbill":"Driane perez"}' localhost:4000/v1/waterbill/1
+curl -X DELETE localhost:4000/v1/waterbill/2
+curl -w '\nTime: %{time_total}s \n' -i localhost:4000/v1/waterbill/1
+curl "localhost:4000/v1/waterbill?sort=waterbill"
+curl "localhost:4000/v1/waterbill?page=1&page_size=20"
+curl "localhost:4000/v1/waterbill?page=1220&page_size=200&sort=waterbill"
+curl "localhost:4000/v1/waterbill?page=0&page_size=-1&sort=waterbill"

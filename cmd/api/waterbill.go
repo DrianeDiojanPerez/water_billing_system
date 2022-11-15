@@ -51,10 +51,10 @@ func (app *application) createwaterbill_listHandler(w http.ResponseWriter, r *ht
 	}
 	//creates a location header for newly created resource/todo_list
 	headers := make(http.Header)
-	headers.Set("Location", fmt.Sprintf("/v1/todo_list/%d", entries.ID))
+	headers.Set("Location", fmt.Sprintf("/v1/waterbill/%d", entries.ID))
 	//write the JSON response with 201 - created status code with a the body
 	//being the school todolistdata and the header being the headers map
-	err = app.writeJSON(w, http.StatusCreated, envelope{"todo_list": entries}, headers)
+	err = app.writeJSON(w, http.StatusCreated, envelope{"waterrbill": entries}, headers)
 	if err != nil {
 		app.serverErrorResponse(w, r, err)
 	}
@@ -82,7 +82,7 @@ func (app *application) showwaterbill_listHandler(w http.ResponseWriter, r *http
 		return
 	}
 	//write the todolistdata returned by Get()
-	err = app.writeJSON(w, http.StatusOK, envelope{"todo_list": todolistdata_todolist}, nil)
+	err = app.writeJSON(w, http.StatusOK, envelope{"waterbill": todolistdata_todolist}, nil)
 	if err != nil {
 		app.serverErrorResponse(w, r, err)
 		return
@@ -240,7 +240,7 @@ func (app *application) waterbill_listHandler(w http.ResponseWriter, r *http.Req
 		return
 	}
 	// Send a JSON response containing all the todo_list items
-	err = app.writeJSON(w, http.StatusOK, envelope{"todo_list": todo_list, "metadata": metadata}, nil)
+	err = app.writeJSON(w, http.StatusOK, envelope{"waterbill": todo_list, "metadata": metadata}, nil)
 	if err != nil {
 		app.serverErrorResponse(w, r, err)
 		return
